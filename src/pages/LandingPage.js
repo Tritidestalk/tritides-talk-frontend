@@ -79,7 +79,7 @@ const LandingPage = () => {
       </section>
 
       <div className="lp-trust-strip">
-        <p>Why organisations trust Tri Tides Talk</p>
+        <p>Why families and communities trust Tri Tides Talk</p>
         <div className="lp-trust-items">
           <div className="lp-trust-item"><span className="lp-trust-number">17</span><span className="lp-trust-label">Pacific Island Languages</span></div>
           <div className="lp-trust-item"><span className="lp-trust-number">24/7</span><span className="lp-trust-label">Always Available</span></div>
@@ -131,10 +131,29 @@ const LandingPage = () => {
         <div className="lp-features-grid">
           <div className="lp-feature-card dark"><div className="icon">🗣️</div><h3>Voice Translation</h3><p>Speak in English and hear the translation in a familiar Pacific voice. Designed for elderly users who struggle with screens.</p></div>
           <div className="lp-feature-card"><div className="icon">🌺</div><h3>17 Pacific Languages</h3><p>Tongan, Samoan, Hawaiian, Maori, Fijian, Bislama and 11 more Pacific Island languages — all in one app.</p></div>
-          <div className="lp-feature-card"><div className="icon">🏥</div><h3>Healthcare Ready</h3><p>Medical phrase library built in. Nurses and community health workers can communicate clearly with Pacific patients.</p></div>
+          <div className="lp-feature-card"><div className="icon">🏡</div><h3>Aged Care Friendly</h3><p>Simple, calm interface designed for elderly Pacific residents and the carers who support them every day.</p></div>
           <div className="lp-feature-card dark"><div className="icon">🎙️</div><h3>Real Pacific Voices</h3><p>Translations spoken in authentic recorded voices — not robotic text-to-speech. Hear a voice that feels like home.</p></div>
           <div className="lp-feature-card"><div className="icon">📱</div><h3>Works on Any Device</h3><p>No app download needed. Works in any browser on any phone, tablet or computer.</p></div>
           <div className="lp-feature-card"><div className="icon">🔒</div><h3>Private & Secure</h3><p>Built in Australia with privacy in mind. Your conversations are never stored or shared.</p></div>
+        </div>
+      </section>
+
+      {/* Organisations Banner */}
+      <section style={{ background: '#f5f0e8', padding: '60px 24px', textAlign: 'center' }}>
+        <div style={{ maxWidth: '700px', margin: '0 auto' }}>
+          <div className="lp-section-tag">For Organisations</div>
+          <h2 className="lp-section-title" style={{ marginBottom: '16px' }}>Aged care & community <em>services</em></h2>
+          <p style={{ fontSize: '18px', color: '#555', marginBottom: '32px', lineHeight: '1.7' }}>
+            Are you an aged care provider, community group, or Pacific Island organisation? We offer tailored plans and support. Get in touch and we'll find the right solution for your team.
+          </p>
+          <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
+            <a href="mailto:team@tritides.com.au?subject=Aged Care Enquiry" className="lp-btn-primary" style={{ textDecoration: 'none' }}>
+              🏠 Aged Care — Get Info
+            </a>
+            <a href="mailto:team@tritides.com.au?subject=Community Organisation Enquiry" className="lp-btn-outline" style={{ textDecoration: 'none' }}>
+              🌺 Community Groups — Get Info
+            </a>
+          </div>
         </div>
       </section>
 
@@ -150,7 +169,7 @@ const LandingPage = () => {
         <div style={{ textAlign: 'center', marginBottom: '48px' }}>
           <div className="lp-section-tag">Simple, honest pricing</div>
           <h2 className="lp-section-title">Communication that <em>connects</em> families</h2>
-          <p className="lp-section-sub">From individual families to aged care facilities. Start with 15 free translations.</p>
+          <p className="lp-section-sub">From individual families to community groups. Start with 15 free translations.</p>
         </div>
         <div className="lp-pricing-grid">
           <div className="lp-plan-card">
@@ -178,21 +197,11 @@ const LandingPage = () => {
             <div className="lp-plan-icon">🏠</div>
             <div className="lp-plan-name">Care Home Plan</div>
             <div className="lp-plan-subtitle">Aged Care</div>
-            <div className="lp-price-row"><span className="lp-price-currency">$</span><span className="lp-price-amount">199</span></div>
-            <div className="lp-price-period">per month</div>
-            <p className="lp-plan-desc">Aged care homes and disability care</p>
-            <ul className="lp-feature-list"><li className="lp-feature-item">10 devices</li><li className="lp-feature-item">12 languages</li></ul>
-            <button onClick={handleGetStarted} className="lp-plan-btn outline">Get Started</button>
-          </div>
-          <div className="lp-plan-card enterprise-card">
-            <div className="lp-plan-icon">🏥</div>
-            <div className="lp-plan-name">Hospital Plan</div>
-            <div className="lp-plan-subtitle">Hospitals</div>
-            <div className="lp-price-row"><span className="lp-price-amount" style={{ fontSize: '32px' }}>Custom</span></div>
-            <div className="lp-price-period">$500+/mo</div>
-            <p className="lp-plan-desc">Hospitals needing many devices and full support</p>
-            <ul className="lp-feature-list"><li className="lp-feature-item">Unlimited devices</li><li className="lp-feature-item">All languages</li></ul>
-            <a href="mailto:team@tritides.com.au?subject=Hospital Plan Inquiry" className="lp-plan-btn enterprise">Contact Us</a>
+            <div className="lp-price-row"><span className="lp-price-amount" style={{ fontSize: '32px' }}>Enquire</span></div>
+            <div className="lp-price-period">tailored pricing</div>
+            <p className="lp-plan-desc">Aged care homes and disability care providers</p>
+            <ul className="lp-feature-list"><li className="lp-feature-item">Multiple devices</li><li className="lp-feature-item">All languages</li></ul>
+            <a href="mailto:team@tritides.com.au?subject=Aged Care Plan Enquiry" className="lp-plan-btn outline" style={{ textDecoration: 'none', display: 'block', textAlign: 'center' }}>Get Info</a>
           </div>
         </div>
       </section>
