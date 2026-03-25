@@ -28,7 +28,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<LandingPage />} />
-          <Route path="/translator" element={<ProtectedRoute><TranslatorPage /></ProtectedRoute>} />
+          <Route path="/translator" element={<TranslatorPage />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </BrowserRouter>
