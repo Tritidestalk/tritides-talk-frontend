@@ -20,6 +20,7 @@ const LandingPage = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [showAccountSettings, setShowAccountSettings] = useState(false);
   const [openFaq, setOpenFaq] = useState(null);
+  const [showBanner, setShowBanner] = useState(true);
   const { logout, isAuthenticated } = useAuth();
   const navigate = useNavigate();
 
@@ -30,6 +31,78 @@ const LandingPage = () => {
 
   return (
     <div className="landing-page">
+      {showBanner && (
+        <div style={{
+          background: '#000',
+          color: '#fff',
+          padding: '16px 24px',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+          gap: '16px',
+          flexWrap: 'wrap',
+          fontSize: '14px',
+          lineHeight: '1.5'
+        }}>
+          <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px', flex: '1 1 auto', minWidth: '280px' }}>
+            <span style={{
+              display: 'inline-block',
+              width: '8px',
+              height: '8px',
+              borderRadius: '50%',
+              background: '#f0b23c',
+              marginTop: '6px',
+              flexShrink: 0
+            }}></span>
+            <span>
+              <strong>We're currently building something special.</strong>
+              {' · '}
+              <em>Need a Pacific language interpreter now?</em>
+              {' '}Contact us at{' '}
+              <a href="mailto:hello@tritides.com.au" style={{ color: '#fff', textDecoration: 'underline' }}>
+                hello@tritides.com.au
+              </a>
+              {' '}and we'll help right away.
+            </span>
+          </div>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexShrink: 0 }}>
+            <a
+              href="mailto:hello@tritides.com.au?subject=Get in touch"
+              style={{
+                display: 'inline-block',
+                padding: '8px 18px',
+                border: '1px solid #fff',
+                borderRadius: '999px',
+                color: '#fff',
+                textDecoration: 'none',
+                fontSize: '14px',
+                whiteSpace: 'nowrap'
+              }}
+            >
+              Get in touch →
+            </a>
+            <button
+              onClick={() => setShowBanner(false)}
+              aria-label="Dismiss banner"
+              style={{
+                background: 'transparent',
+                border: '1px solid rgba(255,255,255,0.25)',
+                color: '#fff',
+                borderRadius: '6px',
+                width: '32px',
+                height: '32px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                cursor: 'pointer'
+              }}
+            >
+              <X size={16} />
+            </button>
+          </div>
+        </div>
+      )}
+
       <nav className="lp-nav">
         <a href="/" className="lp-nav-logo">
           <Globe size={18} strokeWidth={1.5} />
